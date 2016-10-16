@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All Recipes</title>
+</head>
+<body>
+  <h1>All of your recipes</h1>
+  <% @recipes.map do |recipe| %>
+    <div>
+      <a href="/recipes/<%= recipe.id %>"><h2>Name: <%= recipe.name %></h2></a>
+      <h3>Ingredients: <%= recipe.ingredients %></h3>
+      <p>Cook Time: <%= recipe.cook_time %> minutes</p>
+    </div>
+  <% end %>
+  <div>
+    <h3>Create a new recipe: <a href="/recipes/new"><button>New recipe</button></a></h3>
+    
+  </div>
+</body>
+</html>
